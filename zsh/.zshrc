@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 
 export GPG_TTY=$(tty)
 alias kubectx="kubectl config current-context"
-alias vim="nvim"
+alias v="nvim"
 fpath+=("/opt/homebrew/share/zsh/site-functions")
 export PATH="$HOME/go/bin:$PATH"
 eval "$(starship init zsh)"
