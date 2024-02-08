@@ -12,10 +12,10 @@ return require('packer').startup(function(use) -- Packer can manage itself
     }
 
     use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
+        'wittyjudge/gruvbox-material.nvim',
+        as = 'gruvbox-material',
         config = function()
-            vim.cmd('colorscheme rose-pine')
+            vim.cmd('colorscheme gruvbox-material')
         end
     })
 
