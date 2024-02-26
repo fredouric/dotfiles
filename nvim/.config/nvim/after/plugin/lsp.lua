@@ -3,19 +3,17 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-    'rust_analyzer',
     'golangci_lint_ls',
-    'lua_ls',
     'terraformls',
     'yamlls',
     'gopls',
-    'dockerls',
+    'lua_ls',
     'tsserver',
+    'html',
 })
 
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
-
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
@@ -45,7 +43,6 @@ lsp.set_preferences({
 
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
-
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
     vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
@@ -65,9 +62,7 @@ lsp.format_on_save({
     },
     servers = {
         ['lua_ls'] = { 'lua' },
-        ['rust_analyzer'] = { 'rust' },
         ['gopls'] = { 'go' },
-        ['tsserver'] = { 'typescript' },
     }
 })
 
