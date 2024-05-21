@@ -12,7 +12,7 @@ return require('packer').startup(function(use) -- Packer can manage itself
     }
 
     use({
-        'wittyjudge/gruvbox-material.nvim',
+        'sainnhe/gruvbox-material',
         as = 'gruvbox-material',
         config = function()
             vim.cmd('colorscheme gruvbox-material')
