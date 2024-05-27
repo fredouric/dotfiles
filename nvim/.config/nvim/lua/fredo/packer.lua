@@ -6,16 +6,16 @@ return require('packer').startup(function(use) -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.2',
+        'nvim-telescope/telescope.nvim', tag = '0.1.8',
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
     use({
-        'sainnhe/gruvbox-material',
-        as = 'gruvbox-material',
+        'folke/tokyonight.nvim',
+        as = 'tokyonight',
         config = function()
-            vim.cmd('colorscheme gruvbox-material')
+            vim.cmd('colorscheme tokyonight')
         end
     })
 

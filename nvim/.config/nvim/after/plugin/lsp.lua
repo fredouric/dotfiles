@@ -3,14 +3,11 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-    'golangci_lint_ls',
-    'terraformls',
-    'yamlls',
-    'gopls',
     'lua_ls',
-    'tsserver',
-    'html',
+    'gopls',
+    'golangci_lint_ls',
     'bashls',
+    'yamlls',
 })
 
 -- Fix Undefined global 'vim'
