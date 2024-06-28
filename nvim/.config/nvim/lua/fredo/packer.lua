@@ -13,16 +13,21 @@ return require('packer').startup(function(use) -- Packer can manage itself
 
     use({
         'folke/tokyonight.nvim',
-        as = 'tokyonight',
+        as = 'tokyonight-moon',
         config = function()
-            vim.cmd('colorscheme tokyonight')
+            vim.cmd('colorscheme tokyonight-moon')
         end
     })
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
     use('nvim-treesitter/nvim-treesitter-context');
-    use('theprimeagen/harpoon')
+    use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
+    use {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { { "nvim-lua/plenary.nvim" } }
+    }
     use('tpope/vim-fugitive')
 
     use {
@@ -50,4 +55,5 @@ return require('packer').startup(function(use) -- Packer can manage itself
 
     use { 'nvim-tree/nvim-web-devicons' }
     use { 'nvim-lualine/lualine.nvim' }
+    use { 'folke/zen-mode.nvim' }
 end)
