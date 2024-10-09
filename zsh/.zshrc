@@ -26,6 +26,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias v="nvim"
 alias zf="tmux-sessionizer"
+alias branch="git-branch-switcher"
 
 fpath+=("/opt/homebrew/share/zsh/site-functions")
 
