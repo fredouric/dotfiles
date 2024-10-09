@@ -1,5 +1,3 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use) -- Packer can manage itself
@@ -13,16 +11,16 @@ return require('packer').startup(function(use) -- Packer can manage itself
 
     use({
         'folke/tokyonight.nvim',
-        as = 'tokyonight-moon',
+        as = 'tokyonight-storm',
         config = function()
-            vim.cmd('colorscheme tokyonight-moon')
+            vim.cmd('colorscheme tokyonight-storm')
         end
     })
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
     use('nvim-treesitter/nvim-treesitter-context');
-    use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
+    use('nvim-lua/plenary.nvim') -- don't forget to add this one if you don't have it yet!
     use {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
@@ -56,4 +54,5 @@ return require('packer').startup(function(use) -- Packer can manage itself
     use { 'nvim-tree/nvim-web-devicons' }
     use { 'nvim-lualine/lualine.nvim' }
     use { 'folke/zen-mode.nvim' }
+    use { "ellisonleao/carbon-now.nvim", config = function() require('carbon-now').setup() end }
 end)

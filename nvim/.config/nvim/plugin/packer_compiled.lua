@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/fredo/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?.lua;/Users/fredo/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?/init.lua;/Users/fredo/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?.lua;/Users/fredo/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/fredo/.cache/nvim/packer_hererocks/2.1.1716656478/lib/lua/5.1/?.so"
+local package_path_str = "/Users/fredo/.cache/nvim/packer_hererocks/2.1.1725453128/share/lua/5.1/?.lua;/Users/fredo/.cache/nvim/packer_hererocks/2.1.1725453128/share/lua/5.1/?/init.lua;/Users/fredo/.cache/nvim/packer_hererocks/2.1.1725453128/lib/luarocks/rocks-5.1/?.lua;/Users/fredo/.cache/nvim/packer_hererocks/2.1.1725453128/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/fredo/.cache/nvim/packer_hererocks/2.1.1725453128/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -78,6 +78,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/fredo/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
+  },
+  ["carbon-now.nvim"] = {
+    config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15carbon-now\frequire\0" },
+    loaded = true,
+    path = "/Users/fredo/.local/share/nvim/site/pack/packer/start/carbon-now.nvim",
+    url = "https://github.com/ellisonleao/carbon-now.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -179,10 +185,10 @@ _G.packer_plugins = {
     path = "/Users/fredo/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["tokyonight-moon"] = {
-    config = { "\27LJ\2\n?\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0 colorscheme tokyonight-moon\bcmd\bvim\0" },
+  ["tokyonight-storm"] = {
+    config = { "\27LJ\2\n@\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0!colorscheme tokyonight-storm\bcmd\bvim\0" },
     loaded = true,
-    path = "/Users/fredo/.local/share/nvim/site/pack/packer/start/tokyonight-moon",
+    path = "/Users/fredo/.local/share/nvim/site/pack/packer/start/tokyonight-storm",
     url = "https://github.com/folke/tokyonight.nvim"
   },
   ["vim-fugitive"] = {
@@ -198,10 +204,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: tokyonight-moon
-time([[Config for tokyonight-moon]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0 colorscheme tokyonight-moon\bcmd\bvim\0", "config", "tokyonight-moon")
-time([[Config for tokyonight-moon]], false)
+-- Config for: tokyonight-storm
+time([[Config for tokyonight-storm]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0!colorscheme tokyonight-storm\bcmd\bvim\0", "config", "tokyonight-storm")
+time([[Config for tokyonight-storm]], false)
+-- Config for: carbon-now.nvim
+time([[Config for carbon-now.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15carbon-now\frequire\0", "config", "carbon-now.nvim")
+time([[Config for carbon-now.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

@@ -8,6 +8,7 @@ lsp.ensure_installed({
     'golangci_lint_ls',
     'bashls',
     'yamlls',
+    'terraformls',
 })
 
 -- Fix Undefined global 'vim'
@@ -61,6 +62,9 @@ lsp.format_on_save({
     servers = {
         ['lua_ls'] = { 'lua' },
         ['gopls'] = { 'go' },
+        ['tsserver'] = { 'typescript' },
+        ['svelte'] = { 'svelte' },
+        ['terraformls'] = { 'terraform' },
     }
 })
 
