@@ -9,6 +9,7 @@ lsp.ensure_installed({
     'bashls',
     'yamlls',
     'terraformls',
+    'ruff',
 })
 
 -- Fix Undefined global 'vim'
@@ -65,6 +66,7 @@ lsp.format_on_save({
         ['tsserver'] = { 'typescript' },
         ['svelte'] = { 'svelte' },
         ['terraformls'] = { 'terraform' },
+        ['ruff'] = { 'python' },
     }
 })
 
