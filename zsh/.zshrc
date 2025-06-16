@@ -43,5 +43,3 @@ gpgconf --launch gpg-agent
 # Starship prompt
 eval "$(starship init zsh)"
 complete -C '/usr/local/bin/aws_completer' aws
-
-. "$HOME/.local/bin/env"
